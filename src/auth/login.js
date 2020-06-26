@@ -1,11 +1,11 @@
 import React from 'react'; 
-import { AuthContext } from '../../contexts/auth';
+import useAuth from '../contexts/auth';
 
 
 export default function Login(){
 
     //static contextType = AuthContext;
-    const authContext = AuthContext;
+    const authContext = useAuth();
     //Handle Submission
     handleSubmit = (event => {
         //prevent the default

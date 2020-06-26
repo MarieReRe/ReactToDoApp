@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
+import { AuthProvider } from './contexts/auth.js';
 import App from './app.js';
 import { BrowserRouter } from 'react-router-dom';
 
@@ -8,7 +8,10 @@ class Main extends React.Component {
   render() {
     return (
       <BrowserRouter>
-        <App />
+      <AuthProvider>
+      <App />
+      </AuthProvider>
+       
       </BrowserRouter>
     );
   }

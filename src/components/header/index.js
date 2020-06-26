@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { Component } from 'react';
+import {Link} from 'react-router-dom'
 
-export default function Header() {
-    return (
-      <header>
-      </header>
-    )
-  }
+class index extends Component {
+    render() {
+        return (
+           <header>
+                  <nav>
+                <ul>
+               <li><Link to="/">Home</Link></li>
+           </ul>
+            </nav>
+           </header>
+        );
+    }
+}
+
+export default index;

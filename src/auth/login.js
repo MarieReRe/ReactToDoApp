@@ -14,21 +14,29 @@ export default function Login(props) {
         const { username, password } = event.target.elements;
         context.login(username.value, password.value);
     }
-    // const { user } = this.context;
-    // if (user) {
-    //     return (
-    //         <h1>
-    //             Welcome back, {user.username}!
-    //         </h1>
-    //     );
-    // }
+    const logoutSubmit = e => {
+        e.preventDefault();
+
+        context.logout();
+    }
+    const { user } = context;
+    if (user) {
+        return (
+            <h1>
+                Welcome back, {user.username}!	          Welcome back, {user.username}!
+                <form onSubmit={logoutSubmit}>
+                    <button>Log Out</button>
+                </form>
+            </h1>
+        );
+    }
     return (
         <form onSubmit={handleSubmit}>
-          <input placeholder="Username" name={props.username} />
-          <input placeholder="Password" type="password" name={props.password} />
-          <button>Log In</button>
+            <input placeholder="Username" name={props.username} />
+            <input placeholder="Password" type="password" name={props.password} />
+            <button>Log In</button>
         </form>
-      )
+    )
 
 
 }

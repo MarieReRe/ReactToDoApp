@@ -2,36 +2,33 @@ import React from 'react';
 import useAuth from '../contexts/auth';
 
 
-export default function Login() {
+export default function Login(props) {
 
     //static contextType = AuthContext;
     const context = useAuth();
     //Handle Submission
-    handleSubmit = (event) => {
+    const handleSubmit = (event) => {
         //prevent the default
         event.preventDefault();
 
         const { username, password } = event.target.elements;
-        this.context.login(username.value, password.value);
+        context.login(username.value, password.value);
     }
-    const { user } = this.context;
-    if (user) {
-        return (
-            <h1>
-                Welcome back, {user.username}!
-            </h1>
-        );
-    }
+    // const { user } = this.context;
+    // if (user) {
+    //     return (
+    //         <h1>
+    //             Welcome back, {user.username}!
+    //         </h1>
+    //     );
+    // }
     return (
-        <header>
-            <form onSubmit={this.handleSubmit}>
-                <input placeholder="Username" name="username" />
-                <input placeholder="Password" type="password" name="password" />
-                <button>Log In</button>
-            </form>
-        </header>
-
-    )
+        <form onSubmit={handleSubmit}>
+          <input placeholder="Username" name={props.username} />
+          <input placeholder="Password" type="password" name={props.password} />
+          <button>Log In</button>
+        </form>
+      )
 
 
 }

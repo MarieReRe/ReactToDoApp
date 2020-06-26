@@ -10,5 +10,13 @@ export default function Login(){
 
         const {username, password} = event.target.elements;
     })
+    return(
+        <form onSubmit={this.handleSubmit}>
+        <input placeholder="Username" name="username" />
+        <input placeholder="Password" type="password" name="password" />
+        <button>Login</button>
+      </form>
+    )
+    
 
 }

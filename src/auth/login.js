@@ -12,6 +12,7 @@ export default function Login(){
         event.preventDefault();
 
         const {username, password} = event.target.elements;
+        this.context.login(username.value, password.value);
     })
     return(
         <form onSubmit={this.handleSubmit}>

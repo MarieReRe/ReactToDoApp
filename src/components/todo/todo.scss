@@ -57,10 +57,10 @@ body, html {
 
             &.completed-true {
               span {
-                background: pink;
+                background: rgb(214, 111, 255);
                 text-decoration:line-through;
                 &:hover {
-                   background: seagreen;
+                   background: rgb(157, 253, 199);
                 }
               }
             }
@@ -69,7 +69,7 @@ body, html {
                 background: #e0e0e0;
                 cursor:pointer;
                 &:hover {
-                    background: pink;
+                    background: rgb(192, 232, 255);
                 }
             }
              span, input {
@@ -82,7 +82,8 @@ body, html {
             button {
                 background: transparent;
                 border:none;
-                color:blue;
+                border-radius: 20px;
+                color:rgb(12, 139, 0);
                 cursor:pointer;
                 padding:0;
                 margin: 0 .75em;

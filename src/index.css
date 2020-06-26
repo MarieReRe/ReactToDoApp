@@ -45,7 +45,8 @@ body {
   }
   
   nav li a:hover {
-    background-color: #d9390d;
+    background-color: #c0ffb5;
+    color: black;
   }
   
   nav button {

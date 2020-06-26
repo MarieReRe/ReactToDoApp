@@ -14,6 +14,14 @@ export default function Login(){
         const {username, password} = event.target.elements;
         this.context.login(username.value, password.value);
     })
+    const { user } = this.context;
+    if (user) {
+        return (
+          <h1>
+            Welcome back, {user.username}!
+          </h1>
+          );
+      }
     return(
         <form onSubmit={this.handleSubmit}>
         <input placeholder="Username" name="username" />

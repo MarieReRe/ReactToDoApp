@@ -7,7 +7,7 @@
   "dependencies": {
     "@nmq/q": "^1.0.5",
     "cookies": "^0.8.0",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^9.0.0",
     "node-sass": "^4.13.1",
     "react": "16.9.0",
     "react-dom": "16.9.0",
